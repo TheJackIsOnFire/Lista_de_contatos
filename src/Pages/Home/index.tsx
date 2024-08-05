@@ -1,13 +1,11 @@
-import ContactList from '../../containers/ContactList'
-import Header from '../../containers/Header'
+import Main from '../../containers/Main'
 import SideBar from '../../containers/SideBar'
 
 const Home = () => {
   return (
     <>
-      <Header />
       <SideBar />
-      <ContactList />
+      <Main />
     </>
   )
 }

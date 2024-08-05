@@ -1,5 +1,9 @@
 const SearchContact = () => {
-  return <></>
+  return (
+    <>
+      <h1>Input: Buscar Contatos</h1>
+    </>
+  )
 }
 
 export default SearchContact
