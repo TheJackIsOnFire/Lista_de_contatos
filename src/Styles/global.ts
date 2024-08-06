@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: Roboto, sans-serif;
   }
 `
+
 export const ContainerAlignCenter = styled.div`
   display: flex;
   margin: 0 auto;

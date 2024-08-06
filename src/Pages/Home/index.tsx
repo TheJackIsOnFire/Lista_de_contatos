@@ -1,13 +1,7 @@
-import Main from '../../containers/Main'
-import SideBar from '../../containers/SideBar'
+import Main from '../../layout/Main'
 
 const Home = () => {
-  return (
-    <>
-      <SideBar />
-      <Main />
-    </>
-  )
+  return <Main />
 }
 
 export default Home
