@@ -4,7 +4,7 @@ import variablesColors from '../../Styles/variables-colors'
 const ContainerSearchContact = styled.div`
   display: flex;
   align-items: center;
-  margin: 0 auto;
+  //margin: 0 auto;
 `
 
 export const InputContact = styled.input`

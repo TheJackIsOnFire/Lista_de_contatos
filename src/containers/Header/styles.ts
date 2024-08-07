@@ -9,7 +9,8 @@ const ContainerHeader = styled.div`
   /* display: grid;
   grid-template-columns: 280px 1fr; */
   display: flex;
-  padding: 16px 32px;
+  padding: 16px 40px;
+  justify-content: space-between;
 `
 
 export default ContainerHeader
