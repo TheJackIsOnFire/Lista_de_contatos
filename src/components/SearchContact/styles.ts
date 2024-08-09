@@ -25,7 +25,7 @@ export const InputContact = styled.input`
   }
 `
 
-export const ButtonContact = styled.button`
+export const IconSearch = styled.span`
   width: 48px;
   height: 46px;
   display: flex;
@@ -38,11 +38,11 @@ export const ButtonContact = styled.button`
   border-left: none;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
-  cursor: pointer;
   transition: all ease 0.4s;
 
-  &:hover {
-    color: ${variablesColors.white};
+  svg {
+    width: 24px;
+    height: 24px;
   }
 `
 

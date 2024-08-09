@@ -2,8 +2,10 @@ import styled from 'styled-components'
 import variablesColors from '../../Styles/variables-colors'
 
 const ContainerHeader = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 100px;
+  position: sticky;
+  top: 0;
   background-color: ${variablesColors.black2};
   border-bottom: 1px solid ${variablesColors.lineColor};
   /* display: grid;
