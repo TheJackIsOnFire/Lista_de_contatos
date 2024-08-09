@@ -1,4 +1,5 @@
 import { createGlobalStyle, styled } from 'styled-components'
+import variablesColors from './variables-colors'
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -12,10 +13,13 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-export const ContainerAlignCenter = styled.div`
-  display: flex;
-  margin: 0 auto;
-  justify-content: center;
+export const Container = styled.div`
+  height: 100%;
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: ${variablesColors.black};
+  color: ${variablesColors.white};
 `
 
 export default GlobalStyle

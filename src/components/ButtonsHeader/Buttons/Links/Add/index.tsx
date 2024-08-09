@@ -1,13 +1,13 @@
 import { HiUserAdd } from 'react-icons/hi'
-import { Button } from '../../styles'
+import LinkBtn from '../styles'
 
 const BtnAdd = () => {
   return (
     <>
-      <Button>
+      <LinkBtn to="/add-contact">
         <HiUserAdd />
         Adicionar
-      </Button>
+      </LinkBtn>
     </>
   )
 }

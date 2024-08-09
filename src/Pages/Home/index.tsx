@@ -1,13 +1,13 @@
 import ContactList from '../../containers/ContactList'
 import Header from '../../containers/Header'
-import ContainerHome from './styles'
+import { Container } from '../../Styles/global'
 
 const Home = () => {
   return (
-    <ContainerHome>
+    <Container>
       <Header />
       <ContactList />
-    </ContainerHome>
+    </Container>
   )
 }
 

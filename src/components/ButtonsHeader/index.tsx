@@ -1,5 +1,5 @@
 import ContainerButtons from './styles'
-import BtnAdd from './Buttons/Add'
+import BtnAdd from './Buttons/Links/Add'
 import BtnAll from './Buttons/All'
 import BtnFavorite from './Buttons/Favorites'
 import * as enums from '../../utils/enums/status'
