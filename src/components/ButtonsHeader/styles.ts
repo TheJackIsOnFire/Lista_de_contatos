@@ -7,6 +7,18 @@ type Props = {
 
 const ContainerButtons = styled.div`
   display: flex;
+  justify-content: center;
+
+  @media (max-width: 1024px) {
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 540px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 32px;
+  }
 `
 
 export const Button = styled.button<Props>`
@@ -37,6 +49,14 @@ export const Button = styled.button<Props>`
     width: 24px;
     height: 24px;
     margin-bottom: 4px;
+  }
+
+  @media (max-width: 1024px) {
+    margin: 0 16px;
+  }
+
+  @media (max-width: 540px) {
+    margin: 0 auto;
   }
 `
 

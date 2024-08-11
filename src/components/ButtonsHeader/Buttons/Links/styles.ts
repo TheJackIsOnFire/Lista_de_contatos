@@ -30,6 +30,14 @@ const LinkBtn = styled(Link)`
     height: 24px;
     margin-bottom: 4px;
   }
+
+  @media (max-width: 1024px) {
+    margin: 0 16px;
+  }
+
+  @media (max-width: 540px) {
+    margin: 0 auto;
+  }
 `
 
 export default LinkBtn

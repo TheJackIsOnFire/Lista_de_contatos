@@ -12,7 +12,7 @@ const ContainerContact = styled.div`
   border: 1px solid ${variablesColors.lineColor};
   border-radius: 8px;
   background-color: ${variablesColors.black2};
-  padding: 16px;
+  padding: 16px 32px;
   justify-content: space-between;
   align-items: center;
   transition: all ease 0.4s;
@@ -20,12 +20,22 @@ const ContainerContact = styled.div`
   &:hover {
     border-color: ${variablesColors.white};
   }
+
+  @media (max-width: 668px) {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px;
+  }
 `
 
 export const Data = styled.ul`
   display: flex;
   flex-direction: column;
   font-size: 16px;
+
+  @media (max-width: 668px) {
+    width: 100%;
+  }
 `
 export const DataInput = styled.li<Props>`
   width: 100%;
@@ -42,10 +52,18 @@ export const DataInput = styled.li<Props>`
   label {
     margin-right: 8px;
   }
+
+  @media (max-width: 1440px) {
+    width: 95%;
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `
 
 export const UserData = styled.input<Props>`
-  width: 85%;
+  width: 80%;
   font-size: 16px;
   background-color: ${props =>
     props.active ? variablesColors.black : variablesColors.black3};
@@ -53,17 +71,28 @@ export const UserData = styled.input<Props>`
   border: none;
   outline-style: none;
   transition: all ease 0.4s;
+
+  @media (max-width: 1366px) {
+    max-width: 100%;
+    display: block;
+    margin-top: 8px;
+  }
 `
 
 export const Buttons = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 0px 16px 0px 40px;
+  align-items: end;
+
+  @media (max-width: 668px) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `
 
 export const Button = styled.button`
-  width: 100%;
+  width: 85px;
   font-size: 14px;
   font-weight: bold;
   padding: 8px 12px;
@@ -78,6 +107,10 @@ export const Button = styled.button`
   &:hover {
     filter: brightness(80%);
   }
+
+  @media (max-width: 668px) {
+    margin: 8px auto;
+  }
 `
 
 export const BtnFavorite = styled.button`
@@ -87,7 +120,7 @@ export const BtnFavorite = styled.button`
   justify-content: center;
   align-items: center;
   padding: 8px;
-  margin: 8px 0;
+  margin: 8px 20.5px;
   background-color: ${variablesColors.black2};
   color: ${variablesColors.white};
   border: 2px solid transparent;
@@ -102,6 +135,10 @@ export const BtnFavorite = styled.button`
   svg {
     width: 24px;
     height: 24px;
+  }
+
+  @media (max-width: 668px) {
+    margin: 8px auto;
   }
 `
 
