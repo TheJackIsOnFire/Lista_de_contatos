@@ -13,7 +13,12 @@ import ContainerContact, {
   DataInput,
 } from './styles'
 import * as enums from '../../utils/enums/status'
-import { remove, edit } from '../../Redux/contactList/slice'
+import {
+  remove,
+  edit,
+  changeStatusFavorite,
+  changeStatusNormal,
+} from '../../Redux/contactList/slice'
 
 type Props = ContactData
 
@@ -82,20 +87,40 @@ const Contact = ({
             value={telephone}
             id="telephone"
             type="numer"
-            onChange={event => setTelephone(event.target.value)}
+            onChange={event =>
+              setTelephone(event.target.value as unknown as number)
+            }
           ></UserData>
         </DataInput>
       </Data>
       <Buttons>
         {favorite === enums.status.FAVORITE ? (
           <>
-            <BtnIsFavorite>
+            <BtnIsFavorite
+              onClick={() =>
+                dispatch(
+                  changeStatusNormal({
+                    status: enums.status.NORMAL,
+                    id,
+                  })
+                )
+              }
+            >
               <MdFavorite />
             </BtnIsFavorite>
           </>
         ) : (
           <>
-            <BtnFavorite>
+            <BtnFavorite
+              onClick={() =>
+                dispatch(
+                  changeStatusFavorite({
+                    status: enums.status.FAVORITE,
+                    id,
+                  })
+                )
+              }
+            >
               <IoMdHeartEmpty />
             </BtnFavorite>
           </>

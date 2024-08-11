@@ -5,7 +5,7 @@ import { Container } from '../../Styles/global'
 const Home = () => {
   return (
     <Container>
-      <Header />
+      <Header showFilters={true} />
       <ContactList />
     </Container>
   )

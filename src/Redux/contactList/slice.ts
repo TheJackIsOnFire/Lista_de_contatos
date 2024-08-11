@@ -92,8 +92,52 @@ const contactListSlice = createSlice({
         state.data[contactIndex] = action.payload
       }
     },
+    add: (state, action: PayloadAction<Omit<Contact, 'id'>>) => {
+      const thereIsName = state.data.find(
+        contact =>
+          contact.name.toLocaleLowerCase() ===
+          action.payload.name.toLocaleLowerCase()
+      )
+
+      if (thereIsName) {
+        alert('Já existe um contato com este nome.')
+      } else {
+        const lastContact = state.data[state.data.length - 1]
+
+        const newContact = {
+          ...action.payload,
+          id: lastContact ? lastContact.id + 1 : 1,
+        }
+        state.data.push(newContact)
+      }
+    },
+    changeStatusFavorite: (
+      state,
+      action: PayloadAction<{ id: number; status: enums.status }>
+    ) => {
+      const contactIndex = state.data.findIndex(
+        contact => contact.id === action.payload.id
+      )
+
+      if (contactIndex >= 0) {
+        state.data[contactIndex].favorite = action.payload.status
+      }
+    },
+    changeStatusNormal: (
+      state,
+      action: PayloadAction<{ id: number; status: enums.status }>
+    ) => {
+      const contactIndex = state.data.findIndex(
+        contact => contact.id === action.payload.id
+      )
+
+      if (contactIndex >= 0) {
+        state.data[contactIndex].favorite = action.payload.status
+      }
+    },
   },
 })
 
 export default contactListSlice.reducer
-export const { remove, edit } = contactListSlice.actions
+export const { remove, edit, add, changeStatusFavorite, changeStatusNormal } =
+  contactListSlice.actions

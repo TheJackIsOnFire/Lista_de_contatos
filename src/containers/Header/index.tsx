@@ -1,12 +1,23 @@
 import ButtonsHeader from '../../components/ButtonsHeader'
+import BtnBack from '../../components/ButtonsHeader/Buttons/Links/Back'
 import SearchContact from '../../components/SearchContact'
 import ContainerHeader from './styles'
 
-const Header = () => {
+type Props = {
+  showFilters: boolean
+}
+
+const Header = ({ showFilters }: Props) => {
   return (
     <ContainerHeader>
-      <ButtonsHeader />
-      <SearchContact />
+      {showFilters ? (
+        <>
+          <ButtonsHeader />
+          <SearchContact />
+        </>
+      ) : (
+        <BtnBack />
+      )}
     </ContainerHeader>
   )
 }
