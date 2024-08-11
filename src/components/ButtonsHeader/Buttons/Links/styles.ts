@@ -40,4 +40,10 @@ const LinkBtn = styled(Link)`
   }
 `
 
+export const BtnLinkBack = styled(LinkBtn)`
+  @media (max-width: 540px) {
+    margin: 0;
+  }
+`
+
 export default LinkBtn

@@ -1,12 +1,12 @@
 import { IoMdArrowRoundBack } from 'react-icons/io'
-import LinkBtn from '../styles'
+import { BtnLinkBack } from '../styles'
 
 const BtnBack = () => {
   return (
     <>
-      <LinkBtn to="/">
+      <BtnLinkBack to="/">
         <IoMdArrowRoundBack />
-      </LinkBtn>
+      </BtnLinkBack>
     </>
   )
 }

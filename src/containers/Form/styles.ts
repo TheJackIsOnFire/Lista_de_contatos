@@ -8,6 +8,10 @@ const ContainerForm = styled.div`
   padding: 80px 0;
   display: flex;
   align-items: top;
+
+  @media (max-width: 1024px) {
+    width: 80vw;
+  }
 `
 
 export const FormAddContact = styled.form`
@@ -25,7 +29,7 @@ export const FormAddContact = styled.form`
 
   button {
     display: flex;
-    width: 16%;
+    width: auto;
     justify-content: center;
     margin: 32px auto 0 auto;
     padding: 8px 16px;
@@ -38,6 +42,14 @@ export const FormAddContact = styled.form`
     &:hover {
       filter: brightness(80%);
     }
+  }
+
+  @media (max-width: 668px) {
+    padding: 24px 40px;
+  }
+
+  @media (max-width: 440px) {
+    padding: 24px 28px;
   }
 `
 

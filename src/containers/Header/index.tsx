@@ -1,5 +1,5 @@
 import ButtonsHeader from '../../components/ButtonsHeader'
-import BtnBack from '../../components/ButtonsHeader/Buttons/Links/Back'
+import BtnLinkBack from '../../components/ButtonsHeader/Buttons/Links/Back'
 import SearchContact from '../../components/SearchContact'
 import ContainerHeader from './styles'
 
@@ -16,7 +16,7 @@ const Header = ({ showFilters }: Props) => {
           <SearchContact />
         </>
       ) : (
-        <BtnBack />
+        <BtnLinkBack />
       )}
     </ContainerHeader>
   )
